@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				//获取参照标签
+				var $divObj = $('#Id_four');
+				
+				//选择id是Id_four的元素前面紧挨的同辈元素
+				var $result = $divObj.prev();
+				//console.log($result);
+				
+				//选择id是Id_four的元素之前所有的同辈元素
+				var $resultAll = $divObj.prevAll();
+				//console.log($resultAll);
+				
+				//选择id是Id_four的元素后面紧挨的同辈元素
+				var $result2 = $divObj.next();
+				//console.log($result2);
+				
+				//选择id是Id_four的元素后面所有的同辈元素
+				var $result2All = $divObj.nextAll();
+				//console.log($result2All);
+				
+				////选择id是Id_four的元素的父元素
+				var $result3 = $divObj.parent();
+				//console.log($result3);
+				
+				//选择id是Id_four的元素的所有子元素
+				var $result4 = $divObj.children();
+				//console.log($result4);
+				
+				//选择id是Id_four的元素所有同级元素
+				var $result5 = $divObj.siblings();
+				//console.log($result5);
+				
+				//选择id是Id_four的元素内class等于myClass的同辈元素
+				var $result7 = $('#Id_four').find('.myClass');
+				console.log($result7);
+			})
+		</script>
+	</head>
+	<body>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div class="four" id="Id_four">4
+			<span class="myClass">第一个子元素</span>
+			<span>第二个子元素</span>
+		</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+	</body>
+</html>

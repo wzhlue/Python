@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width: 300px;
+				height: 200px;
+				background: skyblue;
+				display: none;
+			}
+		</style>
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				var $Input = $('#btn');
+				$('#btn').click(function(){
+//					$('.box').fadeOut();
+//					$('.box').fadeIn();
+//					$('.box').fadeToggle();
+					//显示show隐藏hide
+					$('.box').css({'display': 'block'});
+					$('.box').show();
+					$('.box').hide();
+					$('.box').toggle();
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" class="classA" value="点击事件" />
+		<div class="box">
+			
+		</div>
+	</body>
+</html>

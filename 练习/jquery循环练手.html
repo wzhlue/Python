@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+//				var iIndex = 0;
+//				$('.list li').each(function(index,elem){
+//					//给下面的标签添加数据
+//					//index得到li标签的下标
+//					//console.log(index);
+//					//elem是每个遍历出来的标签元素
+//					console.log(elem);
+//					iIndex++;
+//					$(this).html(iIndex);
+//					
+//				});
+				//获取ul标签中li集合
+				var $elem = $('.list li');
+				for( var i = 0; i < $elem.length; i++){
+					//通过$elem获取下标得到每个标签元素
+					var $element = $elem.eq(i);a
+					$element.html("hello world");
+				}
+			})
+		</script>
+	</head>
+	<body>
+		<ul class="list">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+</html>

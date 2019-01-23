@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width : 20px;
+				height : 200px;
+				background : skyblue;
+			}
+			.box1{
+				width : 20px;
+				height : 200px;
+				background : red;
+			}
+		</style>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.color.js"></script>
+		<script>
+			$(function(){
+//				$('.box').css({
+//					"width" :1000
+//				})
+				$('.box').animate({
+					"width" :1000,
+					"background-color": "blue"
+				},3000,"linear",function(){
+					console.log('动画完成之后需要做的事情！');
+					
+					$('.box').animate({
+						"height": 500
+					},3000,"linear");
+				});
+				$('.box1').animate({
+					"width":1000
+				},3000,"swing");
+			})
+		</script>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="box1"></div>
+	</body>
+</html>

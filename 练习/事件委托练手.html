@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				//使用事件委托减少绑定次数
+//				$('.list').delegate('li','click',function(){
+//					$(this).css({
+//						"color" :"red"
+//					});
+//				});
+//				//绑定了5次click事件
+				$('.list li').click(function(){
+					$(this).css({
+						"color" :"red"
+					});
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<ul class="list">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</body>
+</html>
