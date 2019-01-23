@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<html>
+ <head>
+  <title>王志豪的html文件示例</title>
+
+</script>
+ </head>
+   <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css"></style>
+ <body>
+<!-- 10、script标签的位置存放
+	-建议把script标签放在</body>后面
+	-如果现在有一个需求：
+		在js里面需要获取到input里面的值，如果把script标签放到head里面会出现问题
+		html解析是从上到下解析的，script标签放到的是head里面，直接在，直接在里面取input里面的值
+		因为页面还没有解析到input那一行，肯定取不到。
+-->
+	
+
+<input tupe="text" name="name" id="nameid" value="aaa"/>
+ </body>
+
+
+   <script type="text/javascript">
+
+	//alert("aaa");
+	var input1= document.getElementById("nameid");
+	alert(input1.value);
+</html>

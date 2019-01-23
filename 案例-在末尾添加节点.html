@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<html>
+ <head>
+  <title>王志豪的html文件示例</title>
+ </head>
+   <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css"></style>
+ <body>
+  
+	<ul id="ulid">
+		<li>111</li>
+		<li>222</li>
+		<li>333</li>
+		<li>444</li>
+	</ul>
+<br/>
+<input type="button" value="add" onclick="add1();"/>
+<script type="text/javascript">
+
+	function add1()
+	{
+		//获得ul标签
+		var ul1 = document.getElementById("ulid");
+		//创建标签
+		var li1 = document.createElement("li");
+		//创建文本
+		var text1 = document.createTextNode("555");
+		//把文本加入到li下面
+		li1.appendChild(text1);
+		//把li加入到ul下面
+		ul1.appendChild(li1);
+	}
+</script>
+ </body>
+</html>

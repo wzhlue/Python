@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<html>
+ <head>
+  <title>王志豪的html文件示例</title>
+ </head>
+   <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css"></style>
+ <body>
+<!--  案例三-全选练习
+ 	*创建一个页面
+ 		-四个复选框表示爱好
+ 		-还有一个复选框操作 全选和全不选
+ 	*三个按钮，分别有事件
+ 		-全选
+ 		-全不选
+ 		-反选 -->
+<input type="checkbox" id="selAllNo"  onclick="selAllNo();"/>全选/全不选<br/>
+ <input type="checkbox" name="love" />篮球
+ <input type="checkbox" name="love" />羽毛球
+ <input type="checkbox" name="love" />乒乓球
+ <input type="checkbox" name="love" />足球
+ <br/>
+ <input type="button" id="selAll" value="全选" onclick="selAll();"/>
+ <input type="button" id="selNo" value="全不选" onclick="selNo();"/>
+ <input type="button" id="selOther" value="反选" onclick="selOther();"/>
+<script type="text/javascript">
+
+
+function selAll(){//全选 
+     var love1=document.getElementsByName("love");
+     for(var i=0;i<love1.length;i++)
+     {
+         var love2=love1[i];
+         love2.checked=true;
+     }
+ }
+ function selNo(){ //全不选
+     var love1=document.getElementsByName("love");
+     for(var i=0;i<love1.length;i++)
+     {
+         var love2=love1[i];
+         love2.checked=false;
+     }
+ }
+ function selOther(){//反选
+     var love1=document.getElementsByName("love");
+     for(var i=0;i<love1.length;i++)
+     {
+         var love2=love1[i];
+         if(love2.checked==true)
+         love2.checked=false;
+         else 
+         love2.checked=true;
+     }
+ }
+
+ function selAllNo(){//全选/ 全不选
+     var love1=document.getElementsByName("love");
+     var sel1=document.getElementById("selAllNo");
+     if(sel1.checked==true)
+     {
+         selAll();
+     }
+     else
+     {
+         selNo();
+     }
+
+ }
+</script>
+ </body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<html>
+ <head>
+  <title>王志豪的html文件示例</title>
+ </head>
+   <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css"></style>
+ <body>
+<!-- js的bom对象
+	-bom：brower object model  浏览器对象模型
+	-有哪些对象
+		-navigator
+			-navigator.appName
+		-screen
+			-获取屏幕的信息
+		-location
+			-href属性：获取请求的url地址
+			-设置url地址
+				页面上安装一个地址，按钮上绑定一个事件，当我点击一个按钮，页面可以跳转到另外一个页面
+				location。href = "first.html"
+			-<input type="button" value="tz" onclick="href1();"/>
+			鼠标点击事件 onclick="js的方法"
+		-history请求url的历史记录
+			-创建三个页面
+				1、第一个页面a.html写一个超链接到b.html
+				2、创建b.html到c.html
+				3、创建c.html
+			-到访问的上一个页面
+				-history.back();
+				-history.go(-1);
+			-到访问的下一个页面
+				-history.forward();
+				-history.go(1);
+
+		-window(****)
+			-窗口对象
+			-顶层对象（所有的bom对象都是在window里面操作的）
+
+			-方法
+				-window.alert();页面弹出一个框，并提示内容
+					简写alert();
+				-window.confrim();确认框
+					-var flag= window.confirm("是否删除");
+				-window.prompt();
+					-window.prompt("please input: ","0");
+					window.prompt("在显示的内容","输入框里的默认值");
+				-window.open();打开一个新的窗口
+					-open("打开的新窗口的地址url","","窗口特征，比如窗口宽度和高度")
+					-创建一个按钮，点击按钮，打开一个新窗口
+					window.open("js数组.html","","width=200,height=100");
+				-close():关闭窗口（浏览器兼容性比较差）
+					-window.close();
+				-做定时器
+					-setInterval("js代码","毫秒数") 1s=1000ms
+						-window.setInterval("alert('123');"5000);表示每5s就alert("123");
+					-setTimeout()
+						-表示在毫秒数之后执行，但是只会执行一次
+							-window.setTimeout("alert('123');",4000);
+					-clearInterval();
+						-清除setInterval设置的定时器
+					-clearTimeout();
+						-清楚setTimeout设置的定时器
+		-->
+
+	 <input type="button" value="interval" onclick="clear1();"/>
+	 <br/>
+	 <input type="button" value="timeout" onclick="time1()";/>
+		
+<script type="text/javascript">
+
+
+	/*function href1()
+	{
+		alert("aaa");
+	}
+	document.write("<br/>");	
+	document.write(navigator.appName);
+	document.write("<br/>");
+	//screen
+	document.write(screen.height);
+	document.write("<br/>");
+	document.write(screen.width);
+	document.write("<br/>");
+
+	//location
+	document.write(location.href);
+*/
+/*
+	//confirm
+	var flag= window.confirm("是否删除");
+	//alert(flag);
+	
+	if (flag == true)
+	{
+		alert("删除成功");
+	}
+	else
+	{
+		alert("删除失败");
+	}
+	document.write("<hr/>");
+	*/
+	//演示prompt方法
+	//window.prompt("please input: ","0");
+	
+	//open方法
+	
+	/*function open1()
+	{
+		window.open("js数组.html","","width=200,height=100");
+	}*/
+
+	
+	//演示setInterval
+	//var id1= window.setInterval("alert('123');",3000);
+
+	//演示setTimeout方法
+	var id2= window.setTimeout("alert('123');",5000);
+
+	function clear1()
+	{
+		clearInterval(id1);
+	}
+	function time1()
+	{
+		clearTimeout(id2);
+	}
+</script>
+ </body>
+</html>

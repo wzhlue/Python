@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<html>
+ <head>
+  <title>王志豪的html文件示例</title>
+ </head>
+   <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css"></style>
+ <body>
+<!-- 1、js的string对象
+	-创建String对象
+		-var str = "abc" 
+	-方法和属性
+		-属性length：字符串的长度
+		-方法：
+			（1）与html相关的方法
+					-bold();
+					-fontcolor
+			（2）与Java类似的方法
+					-连接字符串的方法:concat
+					-返回指定位置的字符串charAt
+					-返回字符串的位置：indexOf
+					-split();切分字符串
+		
+		-->
+<script type="text/javascript">
+/*
+	//length属性
+	var str = "abcde";
+	document.write(str.length);
+
+	//bold方法
+	document.write("<hr/>");
+	var str1 = "asdf";
+	document.write(str1.bold());
+
+	//fontcolor
+	document.write("<hr/>");
+	var str2 = "asdf";
+	document.write(str1.fontcolor("#ff0000"));
+
+	//fontsize
+	document.write("<hr/>");
+	var str3 = "asdf";
+	document.write(str1.fontsize("5"));
+
+	//link
+	document.write("<hr/>");
+	var str4 = "asdf";
+	document.write(str1.bold());
+
+	//sub和sup
+	document.write("<hr/>");
+	var s1 = "100";
+	var s2 = "200";
+	var s3 = "300";
+	document.write(s1.sub());
+	document.write(s3);
+	document.write(s2.sup());
+	*/
+
+	//concat方法
+	var str1 = "abc";
+	var str2 = "efg";
+	document.write(str1.concat(str2));
+
+	//charAt
+	document.write("<hr/>");
+	var str4 = "asdfgh";
+	document.write(str4.charAt(3));//字符位置不存在，返回一个空字符串
+
+	//indexOf方法
+	document.write("<hr/>");
+	var str5 = "asdfgh";
+	document.write(str5.indexOf("s"));
+
+	//split
+	document.write("<hr/>");
+	var str6 = "a-s-d-f-g-h";
+	var arr1= str6.split("-");
+	document.write(arr1.length);
+
+	//replace
+	document.write("<hr/>");
+	var str7 = "abcd";
+	document.write(str7.replace("b","S"));
+
+	//substr和substring
+	document.write("<hr/>");
+	var str8 = "asdfgh";
+	document.write(str8.substr(2,3));//从第2位开始，向后截取3个字符
+	document.write("<br/>");
+	document.write(str8.substring(2,3));//从第二位开始到第三位结束，但并不包括第三位
+</script>
+ </body>
+</html>

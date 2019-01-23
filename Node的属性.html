@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<html>
+ <head>
+  <title>王志豪的html文件示例</title>
+ </head>
+   <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css"></style>
+ <body>
+<!-- 3、Node对象属性
+	*nodeName
+	*nodeType
+	*nodeValue
+	*使用dom解析html时候，需要html里面的标签，属性和文本都封装成对象。
+	*标签节点对应的值
+		nodeType：1
+		nodeName：大写标签名称 比如SPAN
+		nodeValue： null
+	*属性节点所对应的值
+		nodeType：2
+		nodeName：属性名称
+		nodeValue：属性的值
+	*文本节点对应的值
+		nodeType：3
+		nodeName：#text
+		nodeValue：文本内容
+	4、node对象的属性二
+		*父节点
+			-ul是li的父节点
+			<ul>
+				<li></li>
+			</ul>
+			-得到父节点
+			var li1 = document.getElementById("li1");
+			//得到ul
+			var ul1 = li1.parentNode;
+			alert(ul1.id);
+		*子节点
+			-li是ul的子节点
+			-childNode：得到所有子节点，兼容性差
+			-firstChild：获取第一个子节点
+			-lastChild：获取最后一个子节点
+		*同辈节点
+			-同一级节点
+			-nextSibling:返回一个给定节点的下一个兄弟节点
+			-preuiousSibing:返回一个给定节点的上一个兄弟节点
+	-->
+
+	<!-- <span id="spanid">hehe</span> -->
+
+	<ul id="ulid">
+		<li id="li1">111111</li>
+		<li id="li2">222222</li>
+		<li id="li3">333333</li>
+		<li id="li4">444444</li>
+	</ul>
+<script type="text/javascript">
+/*
+	var	span1 = document.getElementById("spanid");
+	//alert(span1.nodeName);//span
+	//alert(span1.nodeType);//1
+	//alert(span1.nodeValue);//空
+	//属性
+	var id1 = span1.getAttributeNode("id");
+	//alert(id1.nodeName);//2
+	//alert(id1.nodeType);//id
+	//alert(id1.nodeValue);//spanid
+	//获取文本
+	var text1 = span1.firstChild;
+	alert(text1.nodeName);//#text
+	alert(text1.nodeType);//3
+	alert(text1.nodeValue);//内容
+*/
+	/*//得到li1
+	var li1 = document.getElementById("li1");
+	//得到ul
+	var ul1 = li1.parentNode;
+	alert(ul1.id);
+*/
+	//获得ul标签
+	var ul1 = document.getElementById("ulid");
+	//获取第一个子节点
+	var li1 = ul1.firstChild;
+	alert(li1.id);
+
+	//获取最后一个子节点
+	var li1 = ul1.lastChild;
+	alert(li1.id);
+
+	//获取兄弟节点
+</script>
+ </body>
+</html>

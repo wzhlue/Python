@@ -1,0 +1,93 @@
+<html>
+ <head>
+  <title>王志豪的html文件示例</title>
+ </head>
+   <meta charset="UTF-8">
+  <style type="text/css">
+  
+  </style>
+ <body>
+<!-- 案例四-下拉表格左右选择
+	*下拉选择框 
+	*创建一个页面
+		**两个下拉选择框
+			-设置属性multiple
+		**四个按钮，有事件
+			-
+	-->
+
+ <div style="float:left;">
+     <select id="sel1" multiple="multiple" style="width:100px; height:100px;">
+        <option>aaaaaaaa</option>
+        <option>bbbbbbbb</option>
+        <option>cccccccc</option>
+        <option>dddddddd</option>
+        <option>eeeeeeee</option>
+     </select>
+     <div>
+     <input type="button" value="选中添加到右边" onclick="selAddRight();"/><br/>
+     <input type="button" value="全部添加到右边" onclick="AllAddRight();"/>
+     </div>
+ </div>
+ <div>
+     <select id="sel2" multiple="multiple" style="width:100px; height:100px;">
+        <option>11111111</option>
+        <option>22222222</option>
+     </select>
+     <div>
+     <input type="button" value="选中添加到左边" onclick="selAddLeft();"/><br/>
+     <input type="button" value="全部添加到左边" onclick="AllAddLeft();"/>
+     </div>
+ <div>
+ <script type="text/javascript">
+  function selAddRight(){
+      var sel1=document.getElementById("sel1");
+      var sel2=document.getElementById("sel2");
+      var option1=sel1.getElementsByTagName("option");
+      for(var i=0;i<option1.length;i++){
+         var option2=option1[i];
+         if(option2.selected==true)
+          {
+         sel2.appendChild(option2);
+         i--;//防止多选的时候出错，如果多个选项同时添加到右边，则每次循环length会减小，i会增加，会出错。
+          }
+      }
+
+  }
+  function AllAddRight(){
+      var sel1=document.getElementById("sel1");
+      var sel2=document.getElementById("sel2");
+      var option1=sel1.getElementsByTagName("option");
+      for(var i=0;i<option1.length;i++){
+         var option2=option1[i];
+         sel2.appendChild(option2);
+         i--;
+      }
+  }
+  function selAddLeft(){
+      var sel1=document.getElementById("sel1");
+      var sel2=document.getElementById("sel2");
+      var option2=sel2.getElementsByTagName("option");
+      for(var i=0;i<option2.length;i++){
+         var option1=option2[i];
+         if(option1.selected==true)
+          {
+         sel1.appendChild(option1);
+         i--;//防止多选的时候出错，如果多个选项同时添加到右边，则每次循环length会减小，i会增加，会出错。
+          }
+      }
+
+  }
+  function AllAddLeft(){
+      var sel1=document.getElementById("sel1");
+      var sel2=document.getElementById("sel2");
+      var option2=sel2.getElementsByTagName("option");
+      for(var i=0;i<option2.length;i++){
+         var option1=option2[i];
+         sel1.appendChild(option1);
+         i--;//防止多选的时候出错，如果多个选项同时添加到右边，则每次循环length会减小，i会增加，会出错。
+          }
+      }
+ </script>
+ </body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<html>
+ <head>
+  <title>王志豪的html文件示例</title>
+ </head>
+   <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css"></style>
+ <body>
+<!--  案例二：动态显示时间
+ 	*得到当前的时间
+ 		var date = new Date();
+ 		var dl = date.toLocaleString();
+ 	*需要让页面每一秒获得时间
+ 		setInterval方法 定时器
+ 	*显示到页面上
+ 		每一秒向div里面显示一次时间
+ 		*使用innerHTML属性 -->
+
+	<div id="divid">
+	
+	</div>
+<script type="text/javascript">
+
+	function getTime()
+	{
+		//获取当前时间
+		var date = new Date();
+		//格式化时间
+		var d1 = date.toLocaleString();
+		//获取div标签
+		var divid = document.getElementById("divid");
+		//把时间加入到div里面
+		divid.innerHTML = d1;
+	}
+	//设置定时器，每一秒刷新一下时间
+	setInterval("getTime();","",1000);
+
+</script>
+ </body>
+</html>

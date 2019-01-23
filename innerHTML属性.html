@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<html>
+ <head>
+  <title>王志豪的html文件示例</title>
+ </head>
+   <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css">
+		#div1
+		{
+			width:200px;
+			height:100px;
+			border:2px dashed green;
+		}
+		
+  </style>
+ <body>
+<!--  6、innerHTML属性
+ 	*这个属性不是dom的组成部分，但是大部分浏览器都支持
+ 
+ 	第一个作用：获取文本内容
+ 	第二个人作用：向标签里面设置内容（可以是html代码） 
+		var div1 = document.getElementById("div1");
+	div1.innerHTML = "<ul>呵呵</ul>";
+	**练习：向div里面添加一个表格
+	-->
+
+	<!-- <span id="spanid">呵呵</span> -->
+	<div id="div1">
+	
+	</div>
+<script type="text/javascript">
+
+	/*
+	var spanid = document.getElementById("spanid");
+	alert(spanid.innerHTML);*/
+	var div1 = document.getElementById("div1");
+	//设置内容
+	//div1.innerHTML = "<ul>呵呵</ul>";
+	//向div里面添加一个表格
+	var tab = "<table><tr><td>aaaa</td></tr><tr><td>bbbb</td></tr><tr><td>bbbb</td></tr></table>";
+	var tab = "<table>";
+	tab += "</table>"
+	//相当于var tab = "<table></table>"
+	div1.innerHTML = tab;
+</script>
+ </body>
+</html>
