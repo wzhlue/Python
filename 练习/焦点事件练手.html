@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('.box1').focus(function(){
+					console.log("1得到焦点");
+				})
+				$('.box1').blur(function(){
+					console.log("1失去焦点");
+				})
+				$('.box2').blur(function(){
+					console.log("2失去焦点");
+				})
+				$('.box2').focus(function(){
+					console.log("2得到焦点");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<input type="text" class="box1" />
+		<input type="text" class="box2" />
+	</body>
+</html>

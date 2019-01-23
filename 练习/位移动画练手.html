@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width: 300px;
+				height: 300px;
+				margin-top: 100px;
+				background: skyblue;
+			}
+		</style>
+		<script>
+			window.onload = function(){
+				var oDiv = document.getElementById("cartoon");
+				var iLeft = 0;
+				var iDirection = 5;
+				function fnAnimation(){
+					iLeft += iDirection;
+					if(iLeft > 300){
+						iDirection = -5;
+					}
+					if(iLeft < 0){
+						iDirection = 5;
+					}
+					oDiv.style.marginLeft = iLeft + 'px';
+				}
+				setInterval(fnAnimation,100);
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box" id="cartoon">
+			
+		</div>
+	</body>
+</html>

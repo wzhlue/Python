@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				var $btn = $('#btn');
+				$btn.click(function(){
+					$btn.css({
+						"color":"red"
+					});
+					
+				$('.ullist li').click(function(){
+					$(this).css({
+						"color": "red"
+					});
+				});
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<ul class="ullist">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		<button class="a_btn" id="btn">点击事件</button>
+	</body>
+</html>

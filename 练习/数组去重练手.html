@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组去重练手</title>
+		<script>
+			window.onload = function (){
+				var arr = ['aa','bb','cc','',1,0,'1',1,'bb',"null","undefine","null"];
+    			var result = [];
+    			for (var i = 0;i<arr.length;i++){
+        			//如果当前数组的第i项已经保存进了临时数组，忽略掉
+        			//否则的话把当前项push到临时数组里面
+        			if(result.indexOf(arr[i]) < 0)  
+        			result.push(arr[i]);
+        			//indexOf 返回元素在result中的位置，如果没有返回-1；
+    			}
+    		
+    		console.log(result);
+			}
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

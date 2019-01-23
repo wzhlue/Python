@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width: 500px;
+				height: 500px;
+				background: red;
+			}
+		</style>
+		<script>
+			window.onload = function(){
+				var oBlackBtn = document.getElementById("one");
+				var oBlueBtn = document.getElementById("two");
+				var oDiv = document.getElementById("wzh");
+				oBlackBtn.onclick = function(){
+					oDiv.style.backgroundColor = 'black';
+				}
+				oBlueBtn.onclick = function(){
+					oDiv.style.backgroundColor = 'blue';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box" id="wzh">
+			<input type="button" id="one" value="黑色" />
+			<input type="button" id="two" value="蓝色" />
+		</div>
+	</body>
+</html>

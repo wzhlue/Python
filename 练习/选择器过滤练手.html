@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				var $fiveDiv = $('div');
+				var $result = $fiveDiv.has('p');
+				
+				var $unresult = $fiveDiv.not('.third');
+				//console.log($unresult);
+				
+				var $index = $fiveDiv.eq(3);
+				console.log($index);
+			})
+		</script>
+	</head>
+	<body>
+		<div>1</div>
+		<div class="second">2</div>
+		<div class="third">3</div>
+		<div>
+			4
+			<p>使我痛苦者，必使我强大！</p>
+		</div>
+		<div>5</div>
+	</body>
+</html>
