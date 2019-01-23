@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>浮动float</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.main{
+				width: 800px;
+				height: 500px;
+				background: skyblue;
+				margin: 100px auto;
+			}
+			.main ul{
+				list-style: none;
+			}
+			.main ul li{
+				width: 100px;
+				height: 100px;
+				background: red;
+				margin-top: 10px;
+				margin-right: 10px;
+				float: left;/*浮动 left right none inherit*/
+			}
+			.left{
+				width: 100px;
+				height: 100px;
+				background: red;
+				float: left;
+			}
+			.right{
+				width: 100px;
+				height: 100px;
+				background: yellow;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<!--<ul>
+				<li>盒子一</li>
+				<li>盒子二</li>
+				<li>盒子三</li>
+				<li>盒子四</li>
+			</ul>-->
+			<div class="left">我是左盒子</div>
+			<div class="right">我是右盒子</div>
+		</div>
+		
+	</body>
+</html>

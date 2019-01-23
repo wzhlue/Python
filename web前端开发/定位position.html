@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>定位position</title>
+		<!--定位position
+			relative
+			absolute
+			fixed
+			static 一般不使用
+		-->
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body.main{
+				width: 800px;
+				height: 400px;
+				background: blue;
+				margin: 50px auto;
+				position: relative;/*相对定位,一般定位到某个父元素时给出该属性*/
+			}
+			.left{
+				width: 100px;
+				height: 100px;
+				background: skyblue;
+				position: absolute;/*绝对定位配合相对定位使用left top right bottom固定的像素或给页面视图百分比*/
+				top: 100px;
+				left: 100px;
+			}
+			.right{
+				width: 100px;
+				height: 100px;
+				background: orange;
+				position: fixed;/*固定定位left top right bottom固定的像素或给页面视图百分比*/
+				top: 50%;
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+	</body>
+</html>

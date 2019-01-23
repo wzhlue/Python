@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>display</title>
+		<style type="text/css">
+			div{
+				background: yellow;
+				/*display: inline-block;*/
+				display: block;
+				/*display: inline;*//*inline让元素显示为内联元素（成一行显示）不可以改变高度和宽度；
+									none不让此元素显示,隐藏起来
+									block会将此元素显示为块级元素  带有换行符
+									inline-block是显示为内联元素可以改变当前高度和宽度*/
+			}
+			p{
+				margin: auto;
+				background: skyblue;
+				/*display: inline;*/
+				/*display: inline-block;*/
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			我是div
+		</div>
+		<p>我是p标签</p>
+	</body>
+</html>

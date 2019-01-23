@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vertical-align(垂直对齐)</title>
+		<style>
+			.box{
+				background: skyblue;
+			}
+			.box img{
+				/*sub垂直对齐文本的下标	super垂直对齐文本的上标	middle
+				 * 	top与行中最高元素等高	text-top元素顶端与父元素字体顶端对齐*/
+				vertical-align: sub ;/*baseline默认方式	垂直对齐  大写字母和汉字	基线*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			我就是<img src="img/个人照.png" />王志豪
+		</div>
+	</body>
+</html>

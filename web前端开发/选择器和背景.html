@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>id_class</title>
+		<style type="text/css">
+			/*.wrap{
+				width: 100px;
+				height: 200px;
+				background: red;
+			}
+			#wrapid{
+				width: 100px;
+				height: 200px;
+				background: yellow;
+			}
+			.basic{
+				width: 100px;
+				height: 200px;
+				/*background: blue;背景颜色*/
+				background-color: brown;/*用英文表示背景颜色*/
+				background-color: #FFFF00;/*十六进制值*/
+				background-color: rgba(237,144,6,0.5);/*r-red,g-green,b-blue;a:0-1*/
+			}
+			div p{
+				/*所有div里面的p标签*/
+				background-color: #aaa;
+			}*/
+			.basic>p{
+				/*父元素内部所有的p标签*/
+				background-color: #ccc;
+			}
+			/*别的标签也可以实现*/
+			a:link{
+				background-color:green ;/*未访问链接*/
+			}
+			a:active{
+				background-color: red;/*点击链接的过程*/
+			}
+			a:visited{
+				background-color: pink;/*已经访问过的链接*/
+			}
+			a:hover{
+				background-color: #00ffff;/*鼠标经过链接时的颜色*/
+			}
+			p:before{
+				content: "小";
+				color: yellow;
+			}
+			p:after{
+				content: "豪";
+				color: gray;
+			}
+			.basic>p:nth-child(3){
+				color: #fff;
+			}
+			/*第一行*/
+			.basic>p:first-line{
+				color: grown;
+			}
+			/*第一个字母*/
+			.basic>p:first-child{
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap"><!--class选择器在文档中可以多次出现-->
+			
+		</div>
+		
+		<div id="wrapid"><!--id选择器只能在文档中出现一次 权重值大于class-->
+			
+		</div>
+		<!--背景详情-->
+		<div class="basic">
+			<p>我是basic里面的p标签</p>
+			<p>11111111</p>
+			<p>11111111</p>
+			<p>11111111</p>
+		</div>
+		<div>
+			<a href="#">点一下</a>
+		</div>
+	</body>
+</html>
