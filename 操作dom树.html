@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<html>
+ <head>
+  <title>王志豪的html文件示例</title>
+ </head>
+   <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css">
+
+	#div1
+	{
+		width:200px;
+		height:150px;
+		border:5px dashed green;
+	}
+	#div2
+	{
+		width:200px;
+		height:150px;
+		border:5px dashed blue;
+	}
+  </style>
+
+ <body>
+<!-- 5、操作dom树
+		**appendChild()方法
+			-添加子节点到末尾
+			-特点：类似与剪切粘贴的效果
+		**insertBefore(newNode,oldNode)方法
+			-在某个节点之前插入一个新的节点
+			-两个参数
+				*要插入的节点
+				*在谁之前插入
+		**没有insertAlfter()方法
+		**删除节点：removeChild()方法
+			-通过父节点删除，不能自己删除
+		**替换节点：replaceChild(newNode,oldNode)方法
+			-通过父节点替换，不能自己替换
+		**复制节点：cloneNode(true)
+		**查找节点：getElementById();  getElementByName();  getElementByTagName();
+		
+-->
+	
+	<!-- <div id="div1">
+		<ul id="ulid">
+			<li>jack</li>
+			<li>tom</li>
+			<li>rose</li>
+		</ul>
+	
+	</div>
+	<div id="div2">
+	
+	</div>
+	<input type="button" value="add" onclick="add1();"/> -->
+
+	<!-- <ul id="ulid">
+		<li id="li1">王志豪</li>
+		<li id="li2">桂宝</li>
+		<li id="li3">朱东帅</li>
+		<li id="li4">雷晨</li>
+		<li id="li5">徐中祥</li>
+	</ul>
+	<input type="button" value="insert" onclick="insert1();"/> -->
+
+	<ul id="ulid">
+		<li>缘之空</li>
+		<li>恶魔高中</li>
+		<li>嗜血狂袭</li>
+		<li>一拳超人</li>
+	</ul>
+	<div id="divid">
+	
+	</div>
+
+	<input type="button" value="copy" onclick="copy1();"/>
+<script type="text/javascript">
+/*
+	function add1()
+	{
+		//获得div2
+		var div2 = document.getElementById("div2");
+		//获取ul
+		var ul1 = document.getElementById("ulid");
+		//将ul添加到div2中
+		div2.appendChild(ul1);
+	}
+*/
+/*
+ function insert1()
+ {
+	var li3 = document.getElementById("li3");
+	//创建li标签
+	var li = document.createElement("li");
+	//创建text文本
+	var text1 = document.createTextNode("吴德禄");
+	//把文本加到li标签里面
+	li.appendChild(text1);
+	//获得ul标签
+	var ul1 = document.getElementById("ulid");
+	//把li标签插入到li3标签的前面
+	ul1.insertBefore(li,li3);
+ }
+ */
+
+	function copy1()
+	{
+		//获取ul标签
+		var ul = document.getElementById("ulid");
+		//复制ul标签
+		var ulcopy = ul.cloneNode(true);
+		//获取div标签
+		var divid = document.getElementById("divid");
+		//把复制的ul标签添加到div标签里面
+		divid.appendChild(ulcopy);
+	}
+</script>
+ </body>
+</html>

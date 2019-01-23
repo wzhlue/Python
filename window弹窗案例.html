@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<html>
+ <head>
+  <title>王志豪的html文件示例</title>
+ </head>
+   <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css"></style>
+ <body>
+
+ <!-- 10、案例：window弹窗
+ 	-实现过程
+ 		1、创建一个页面
+ 			-有两个输入项和一个按钮
+ 			-按钮上面有一个事件，弹出一个新窗口
+ 		2、创建弹出页面
+ 			-表格
+ 			-每一个有一个按钮和编号和姓名
+ 			-按钮上有一个事件：把当前的编号和姓名，赋值到第一个页面相应的位置 
+			
+		-做这个案例会有一个问题
+			-由于我们现在访问的是本地文件，js安全性，谷歌浏览器安全级别很高，不允许访问本地文件
+			-在实际开发中，没有这样的问题，实际中不可能访问本地的文件
+			-->
+
+	学号：<input type="test" id="numid"/><br/>
+	姓名：<input type="test" id="nameid"/><br/>
+	<input type="button" value="选择" onclick="open1();"/>
+<script type="text/javascript">
+
+	function open1()
+	{
+		window.open("user.html","","width=250,height=150");
+	}
+	
+</script>
+ </body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<html>
+ <head>
+  <title>王志豪的html文件示例</title>
+ </head>
+   <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css"></style>
+ <body>
+<!--   什么是重载？方法名相同，参数不同
+		
+		-js不存在重载，但可以通过其他方式模拟重载
+			-调用最后一个参数
+			-把传递的方法保存到arguments数组里面
+-->
+<script type="text/javascript">
+
+	function add(a,b)
+	{
+		alert("length "+arguments.length);
+		return a+b;
+	}
+	/*function add(a,b,c)
+	{
+		return a+b+c;
+	}
+	function add(a,b,c,d)
+	{
+		return a+b+c+d;
+	}*/
+
+	//调用
+	alert(add(1,2));
+	alert(add(1,2,3));
+	alert(add(1,2,3,4));
+</script>
+ </body>
+</html>

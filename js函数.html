@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<html>
+ <head>
+  <title>王志豪的html文件示例</title>
+ </head>
+   <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css"></style>
+ <body>
+ <!-- 8、js的函数
+ ****函数的参数列表，不需要写var，直接写参数名称
+ 	**在java里面定义方法
+ 		public 返回类型void/int 方法名（参数列表）
+ 		{
+ 			方法体；
+ 			返回值；
+ 		}
+ 	**在js里面定义函数（三种方式）
+ 		-第一种方式：
+ 			***使用一个关键字function
+ 			***function 方法名（参数列表）
+ 			{
+ 				方法体；可有可无，看实际需要
+ 			}
+		-第二种方式：
+			***匿名函数
+				function（参数列表）
+				{
+					方法体和返回值；
+				}
+			
+		-第三种方式：（用的少，了解一下）
+			***使用到js里面一个内置对象 Function
+				new Function("参数列表","方法体和返回值");
+				也没有名字，需要你自己起名字
+				var add4=new Function("x,y","var sum;sum=x+y; return sum;");
+		
+		-->
+<script type="text/javascript">
+/*	//无返回值
+	function add(a,b)
+	{
+		var sum = a+b;
+		alert(sum);
+	}
+	add(1,2);
+	//有返回值
+	function add(a,b)
+	{
+		var sum = a+b;
+		return sum;
+	}
+	alert(add(3,2));
+	*/
+
+	var add3=function(m,n)
+	{
+		alert(m,n);
+	}
+	//调用方法
+	add3(5,6);
+
+	var add4=new Function("x,y","var sum;sum=x+y; return sum;");
+	alert(add4(2,5));
+</script>
+ </body>
+</html>

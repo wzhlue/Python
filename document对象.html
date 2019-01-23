@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<html>
+ <head>
+  <title>王志豪的html文件示例</title>
+ </head>
+   <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css"></style>
+ <body>
+  
+<!-- 9、document对象
+	-每个载入浏览器的html文档都会成为document对象
+	常用方法
+		-write()方法
+			(1)向页面输出变量（值）
+			(2)向页面输出html代码
+		-getElementById();
+			-通过id得到元素（标签）
+		--getElementsByName
+			-通过标签的name属性值得到标签
+			-返回的是一个集合（数组）
+
+		-getElementsByTagnName
+			-通过标签名获得元素
+		-->
+	<!-- <input type="text" id="w" value="aaaa"/>
+	<br> -->
+	<!-- <input type="text" name="name1" value="aaaa"/>
+	<br/>
+	<input type="text" name="name1" value="bbbb"/>
+	<br/>
+	<input type="text" name="name1" value="cccc"/>
+	<br/>
+	<input type="text" name="name1" value="dddd"/> -->
+	<input type="text" name="name1" value="aaaa"/>
+	<br/>
+<script type="text/javascript">
+
+/*
+	//write方法
+	var str ="abc";
+	document.write(str);
+
+	//getElementById
+	var input= document.getElementById("w");
+	//得到里面的value值
+	//alert(input.value);
+	//向input里面设置一个value的值
+	input.value = "bbbbb";
+	alert(input.value);
+	*/
+	/*
+	//getElementsByName
+	var input = document.getElementsByName("name1");
+	//遍历数组
+	for(var i=0;i<=input.length;i++)
+	{
+		var input1 = input[i];
+		alert(input1.value);
+	}*/
+	//getElementsByTagName
+	//var input2 = document.getElementsByTagName("input");
+	//alert(input2.length);
+	//遍历数组
+	/*
+	for(var m=0;m<=input2.length;m++)
+	{
+		var inputs = input2[m];
+		alert(inputs.value);
+	}
+	*/
+
+	//通过name得到input标签
+	var input = document.getElementsByName("name1")[0];
+	alert(input.value);
+
+	//getElementsByTagName
+	var input1= document.getElementsByTagName("name1")[0];
+	alert(input1);
+</script>
+ </body>
+</html>

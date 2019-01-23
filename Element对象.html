@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<html>
+ <head>
+  <title>王志豪的html文件示例</title>
+ </head>
+   <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css"></style>
+ <body>
+<!--   
+   Elmement对象
+  	-要操作element对象，首先要获取element对象
+  		-使用document里面相应的方法获取
+  	- 方法
+		-获得属性的值
+			var input1 = document.getElementById("inputid");
+			//alert(input1.value);
+			alert(input1.getAttribute("value"));
+		-设置属性的值
+			input1.setAttribute("class","haha");
+		-删除属性
+			input1.removeAttribute("name");不能删除value
+		-想要获得标签下面的子标签
+			-使用属性childNodes，但是这个兼容性很差
+			-在Element对象的范围内，可以用来查找其他节点的唯一有效方法就是getElementsByTagName()方法，
+			该方法返回的是一个集合
+			
+	-->
+
+	<!-- <input type="text" id="inputid" name="name" value="aaaa"/> -->
+
+	<ul id="ulid1">
+		<li>11111111</li>
+		<li>22222222</li>
+		<li>33333333</li>
+	</ul>
+<script type="text/javascript">
+/*
+	var input1 = document.getElementById("inputid");
+	//alert(input1.value);
+	//alert(input1.getAttribute("value"));
+	//alert(input1.class);
+	//alert(input1.getAttribute("class"));
+	//alert(input1.getAttribute("class"));
+	input1.setAttribute("class","haha");
+	//alert(input1.getAttribute("class"));
+
+	input1.setAttribute("name","name1");
+	alert(input1.getAttribute("name"));
+	input1.removeAttribute("name");
+	alert(input1.getAttribute("name"));
+	*/
+
+	//获取ul下面的所有子标签（子元素）
+	//获得ul标签
+	var ul2 = document.getElementById("ulid1");
+	//获取ul下面的子标签
+	//var lis = ul2.childNodes;
+	//alert(lis.length);
+	var lis = ul2.getElementsByTagName("li");
+	alert(lis.length);
+</script>
+ </body>
+</html>

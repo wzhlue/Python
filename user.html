@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<html>
+ <head>
+  <title>王志豪的html文件示例</title>
+ </head>
+   <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css"></style>
+ <body>
+  
+  <table border="1" bordercolor="#ff0000">
+		<tr>
+			<td>选项</td>
+			<td>学号</td>
+			<td>姓名</td>
+		</tr>
+		<tr>
+			<td><input type="button" value="选择" onclick="s1('1','王志豪');"/></td>
+			<td>1</td>
+			<td>王志豪</td>
+		</tr>
+		<tr>
+			<td><input type="button" value="选择" onclick="s1('2','朱东帅');"/></td>
+			<td>2</td>
+			<td>朱东帅</td>
+		</tr>
+		<tr>
+			<td><input type="button" value="选择" onclick="s1('3','桂宝');"/></td>
+			<td>3</td>
+			<td>桂宝</td>
+		</tr>
+		<tr>
+			<td><input type="button" value="选择" onclick="s1('4','雷晨');"/></td>
+			<td>4</td>
+			<td>雷晨</td>
+		</tr>
+		<tr>
+			<td><input type="button" value="选择" onclick="s1('5','徐中祥');"/></td>
+			<td>5</td>
+			<td>徐中祥</td>
+		</tr>
+	</table>
+<script type="text/javascript">
+
+
+	function s1(num1,name1)
+	{
+		//document.getElementById("numid");
+		var jm= window.opener;//得到原来的界面
+		jm.document.getElementById("numid").value = num1;
+		jm.document.getElementById("nameid").value = name1;
+		//关闭窗口
+		window.close();
+	}
+	
+</script>
+ </body>
+</html>
+	
